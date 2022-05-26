@@ -1,0 +1,264 @@
+body {
+  background: goldenrod;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.person {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.position {
+  position: absolute;
+}
+
+.head,
+.bun {
+  background: #48484a;
+  border-radius: 50%;
+}
+
+.head {
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 250px;
+}
+
+.bun {
+  width: 50px;
+  height: 50px;
+  top: 175px;
+  left: 340px;
+}
+
+.shoulders {
+  width: 100px;
+  height: 170px;
+  background: floralwhite;
+  border-radius: 45%;
+  top: 120px;
+  left: 270px;
+}
+
+.pants {
+  background: gainsboro;
+  border-radius: 40%;
+}
+
+.pant__left {
+  width: 130px;
+  height: 50px;
+  top: 220px;
+  left: 180px;
+  transform: rotate(5deg);
+  -webkit-animation: pant-left-mvmt 1s linear infinite alternate;
+          animation: pant-left-mvmt 1s linear infinite alternate;
+}
+
+.pant__right {
+  width: 130px;
+  height: 50px;
+  top: 150px;
+  left: 280px;
+  transform: rotate(5deg);
+  -webkit-animation: pant-right-mvmt 1s linear infinite alternate;
+          animation: pant-right-mvmt 1s linear infinite alternate;
+}
+
+.feet {
+  background: floralwhite;
+}
+
+.foot__left {
+  width: 60px;
+  height: 30px;
+  border-radius: 30% 50% 40% 50%;
+  top: 225px;
+  left: 150px;
+  -webkit-animation: foot-left-mvmt 1s linear infinite alternate;
+          animation: foot-left-mvmt 1s linear infinite alternate;
+}
+
+.foot__right {
+  width: 60px;
+  height: 30px;
+  border-radius: 50% 40% 50% 30%;
+  top: 165px;
+  left: 365px;
+  transform: rotate(5deg);
+  -webkit-animation: foot-right-mvmt 1s linear infinite alternate;
+          animation: foot-right-mvmt 1s linear infinite alternate;
+}
+
+.box {
+  background: crimson;
+  width: 150px;
+  height: 50px;
+  top: 90px;
+  left: 245px;
+}
+
+.arm__right {
+  width: 40px;
+  height: 25px;
+  background: lightsalmon;
+  border-radius: 40% 50% 20% 20%;
+  top: 105px;
+  left: 300px;
+}
+
+.arm__left {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-bottom: 40px solid lightsalmon;
+  border-right: 110px solid transparent;
+  top: 250px;
+  left: 330px;
+  -webkit-animation: arm-left-mvmt 1s linear infinite alternate;
+          animation: arm-left-mvmt 1s linear infinite alternate;
+}
+
+.hand {
+  width: 40px;
+  height: 20px;
+  background: lightsalmon;
+  border-radius: 40%;
+  top: 275px;
+  left: 420px;
+  transform: rotate(10deg);
+  -webkit-animation: hand-left-mvmt 1s linear infinite alternate;
+          animation: hand-left-mvmt 1s linear infinite alternate;
+}
+
+/* animations */
+@-webkit-keyframes pant-left-mvmt {
+  from {
+    left: 180px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 280px;
+    transform: rotate(-5deg);
+  }
+}
+@keyframes pant-left-mvmt {
+  from {
+    left: 180px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 280px;
+    transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes foot-left-mvmt {
+  from {
+    left: 150px;
+  }
+  to {
+    left: 365px;
+  }
+}
+@keyframes foot-left-mvmt {
+  from {
+    left: 150px;
+  }
+  to {
+    left: 365px;
+  }
+}
+@-webkit-keyframes pant-right-mvmt {
+  from {
+    left: 280px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 180px;
+    transform: rotate(-5deg);
+  }
+}
+@keyframes pant-right-mvmt {
+  from {
+    left: 280px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 180px;
+    transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes foot-right-mvmt {
+  from {
+    left: 365px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 150px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes foot-right-mvmt {
+  from {
+    left: 365px;
+    transform: rotate(5deg);
+  }
+  to {
+    left: 150px;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes arm-left-mvmt {
+  from {
+    border-left: 10px solid transparent;
+    border-right: 110px solid transparent;
+    left: 330px;
+  }
+  to {
+    border-left: 120px solid transparent;
+    border-right: 10px solid transparent;
+    left: 210px;
+  }
+}
+@keyframes arm-left-mvmt {
+  from {
+    border-left: 10px solid transparent;
+    border-right: 110px solid transparent;
+    left: 330px;
+  }
+  to {
+    border-left: 120px solid transparent;
+    border-right: 10px solid transparent;
+    left: 210px;
+  }
+}
+@-webkit-keyframes hand-left-mvmt {
+  from {
+    left: 420px;
+    transform: rotate(10deg);
+  }
+  to {
+    left: 200px;
+    transform: rotate(-10deg);
+  }
+}
+@keyframes hand-left-mvmt {
+  from {
+    left: 420px;
+    transform: rotate(10deg);
+  }
+  to {
+    left: 200px;
+    transform: rotate(-10deg);
+  }
+}
